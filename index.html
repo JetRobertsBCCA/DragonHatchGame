@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Hatchery Idle Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .btn {
+        padding: 10px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dragon Hatchery Idle Game</h1>
+
+    <div class="section" id="resources">
+      <h2>Resources</h2>
+      <p>Eggs: <span id="egg-count">0</span></p>
+      <p>Dragons: <span id="dragon-count">0</span></p>
+      <p>Gold: <span id="gold-count">0</span></p>
+    </div>
+
+    <div class="section" id="actions">
+      <h2>Actions</h2>
+      <button id="hatch-button" class="btn" disabled>Hatch Egg (1 Egg)</button>
+      <button id="sell-button" class="btn" disabled>Sell Dragon (1 Dragon)</button>
+    </div>
+
+    <div class="section" id="upgrades">
+      <h2>Upgrades</h2>
+      <p>Hatch Speed: <span id="hatch-speed">1 egg/sec</span></p>
+      <button id="upgrade-hatch-speed" class="btn">Upgrade Hatch Speed (10 Gold)</button>
+      <p>Sell Price: <span id="sell-price">1 gold/dragon</span></p>
+      <button id="upgrade-sell-price" class="btn">Upgrade Sell Price (15 Gold)</button>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
